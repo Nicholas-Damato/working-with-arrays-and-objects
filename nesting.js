@@ -50,7 +50,13 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+let employeeUpdater = () => {
+    for(let key in employees){
+      if(key.includes('Theo')){
+        delete employees[key]
+      }
+    }
+}
 
 
 
