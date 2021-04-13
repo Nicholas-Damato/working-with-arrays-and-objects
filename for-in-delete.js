@@ -41,9 +41,8 @@ for(var key in values) {
 
 function showValues( obj ) {
   for(let key in obj){
-    obj[key]
+    console.log(obj[key])
   }
-  return obj
 }
 
 
@@ -98,10 +97,11 @@ let double = (obj) =>{
 let secrets = (obj) => {
   let emptyString = '';
   for(let key in obj){
-    if(obj[key] ){
-
+    if(key.startsWith('sh') ){
+       obj[key = emptyString]
     }
   }
+  return emptyString
 }
 
 
