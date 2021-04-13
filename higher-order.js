@@ -119,13 +119,6 @@ let orderTotals = orders.map((e) =>{
 })
 
 
-
-// let postTaxPrices = prices.map((e,i,a) => {
-//   return e * 1.07
-// })
-
-
-
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
@@ -142,6 +135,18 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal //Code Here
+// let bobsTotal = purchases.filter((e) => e.owner === 'Bob')
+// .map((e) => e.price )
+// .reduce((acc, e) => acc + e,0)
+
+let bobsTotal = purchases.reduce((acc,e) => {
+    if(e.owner === 'Bob'){
+      acc += e.price
+    }
+    return acc
+}, 0)
+
+// let bobsTotal = purchases.reduce((acc, e) => e.owner === 'Bob' ? acc + e.price : acc ,0)
+
 
 

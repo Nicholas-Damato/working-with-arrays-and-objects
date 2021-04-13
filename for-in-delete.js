@@ -95,14 +95,25 @@ let double = (obj) =>{
 */
 
 let secrets = (obj) => {
-  let emptyString = '';
+  let string = ''
   for(let key in obj){
-    if(key.startsWith('sh') ){
-       obj[key = emptyString]
+    if(key.startsWith('sh')){
+       string += obj[key]
     }
   }
-  return emptyString
+  return string
 }
+
+
+// let secrets = (obj) => {
+//   let emptyString = '';
+//   for(let key in obj){
+//     if(key.startsWith('sh') ){
+//        obj[key = emptyString]
+//     }
+//   }
+//   return emptyString
+// }
 
 
 
@@ -198,13 +209,26 @@ let startsWithK = (obj) =>{
   (hint: the method includes() may be of use...)
 */
 
-let hiddenTreasure = (obj) =>{
+let hiddenTreasure = (obj) => {
   for(let key in obj){
-    if(key.includes('treasure')){
-      delete obj[key]
+    if(!obj[key].includes('treasure')){
+        delete obj[key]
     }
   }
   return obj
 }
+
+
+
+
+
+// let hiddenTreasure = (obj) =>{
+//   for(let key in obj){
+//     if(key.includes('treasure')){
+//       delete obj[key]
+//     }
+//   }
+//   return obj
+// }
 
 

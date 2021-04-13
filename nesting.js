@@ -50,13 +50,23 @@ var employees = [
     3. Return the updated employee array.
 */
 
+
 let employeeUpdater = () => {
-    for(let key in employees){
-      if(key.includes('Theo')){
-        delete employees[key]
-      }
+  for(i = 0; i < employees.length; i++){
+    if(employees[i].includes('Theo')){
+      delete employees[i]
     }
+  }
 }
+
+
+// let employeeUpdater = () => {
+//     for(let key in employees){
+//       if(employees[key].includes('Theo')){
+//         delete employees[key]
+//       }
+//     }
+// }
 
 
 
@@ -155,13 +165,10 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-let recordCleaner = (obj) => {
-  for(i = 0; i < obj.length; i++){
-    if(obj[i].accidents.atFaultForAccident === false){
-      return obj[i].atFaultForAccident = true
-    }
+let recordCleaner = () => {
+  for(i = 0; i < myCar.accidents.length; i++){
+    myCar.accidents[i].atFaultForAccident = false
   }
-  return obj
 }
 
 
