@@ -161,7 +161,7 @@ var deleteTheBigNumbers = {
 
 let remove = (obj) => {
   for(let key in obj){
-    if(obj[key] > 100){
+    if(key > 100){
       delete obj[key]
     }
   }
@@ -181,8 +181,11 @@ let remove = (obj) => {
 
 let startsWithK = (obj) =>{
   for(let key in obj){
-     return obj
+     if(key.startsWith('k')){
+       delete obj[key]
+     }
   }
+  return obj
 }
 
 
@@ -198,6 +201,13 @@ let startsWithK = (obj) =>{
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+let hiddenTreasure = (obj) =>{
+  for(let key in obj){
+    if(key.includes('treasure')){
+      delete obj[key]
+    }
+  }
+  return obj
+}
 
 

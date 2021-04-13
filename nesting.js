@@ -74,7 +74,18 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+let removeDuplicates = (arr) => {
+  let noDuplicates = []
+  for(i = 0; i < arr.length; i++){
+    for(j = i + 1; j < arr.length; j++){
+      if(arr[i] === arr[j]){
+        arr.splice(i,1)
+        i -=1;
+      }
+    }
+  }
+  return arr
+}
 
 
 
@@ -102,9 +113,9 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+
+var grumpyActivity = cat.catFriends[0].activities[1]
+var fluffy2ndFriend = cat.catFriends[1].name
 
 
 
@@ -144,7 +155,14 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+let recordCleaner = (obj) => {
+  for(i = 0; i < obj.length; i++){
+    if(obj[i].accidents.atFaultForAccident === false){
+      return obj[i].atFaultForAccident = true
+    }
+  }
+  return obj
+}
 
 
 
@@ -163,6 +181,14 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+let looper = (numsArr) => {
+  for(i = 0; i < numsArr.length; i++){
+    for(j = 0; j < numsArr.length; j++){
+      if(numsArr[i]){
+        
+      }
+    }
+  }
+}
 
 
