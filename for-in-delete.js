@@ -39,11 +39,12 @@ for(var key in values) {
   Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 */
 
-function showValues( obj ) {
-  for(let key in obj){
-    console.log(obj[key])
-  }
+function showValues() {
+  for(let key in values) {
+      return values[key]
+  } 
 }
+
 
 
 
@@ -103,17 +104,6 @@ let secrets = (obj) => {
   }
   return string
 }
-
-
-// let secrets = (obj) => {
-//   let emptyString = '';
-//   for(let key in obj){
-//     if(key.startsWith('sh') ){
-//        obj[key = emptyString]
-//     }
-//   }
-//   return emptyString
-// }
 
 
 
